@@ -1,4 +1,11 @@
-<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%--
+  Created by IntelliJ IDEA.
+  User: 56976
+  Date: 6/22/2023
+  Time: 9:20 AM
+  To change this template use File | Settings | File Templates.
+--%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,6 +16,9 @@
 <h1 class="encabezado">
     Tienda de Inmuebles
 </h1>
+<h2 class="subtitulo">
+    Se ha agregado con exito el Inmueble
+</h2>
 <table>
     <form action="agregarVendedor.jsp" method="get">
         <div class="centrado">
