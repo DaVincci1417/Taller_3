@@ -15,7 +15,7 @@ import static org.jooq.impl.DSL.table;
 
 public class VendedorDAO {
     public static void agregarVendedor(DSLContext query, Vendedor vendedor){
-        Table tablaVendedor = table(name("Libro"));
+        Table tablaVendedor = table(name("Vendedor"));
         Field[] columnas = tablaVendedor.fields("rut","nombre","direccion","titulo_profesional","estado_civil");
         query.insertInto(tablaVendedor, columnas[0], columnas[1], columnas[2], columnas[3], columnas[4])
                 .values(vendedor.getRut(), vendedor.getNombre(), vendedor.getDireccion(), vendedor.getTituloProfesional(), vendedor.getEstadoCivil())

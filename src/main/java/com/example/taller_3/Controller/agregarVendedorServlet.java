@@ -59,8 +59,8 @@ public class agregarVendedorServlet extends HttpServlet {
     }
     private boolean agregarVendedor(Vendedor vendedor) throws ClassNotFoundException {
         DSLContext query= DBGenerator.conectarBD("TiendaInmueble");
-        List<Vendedor> articulos = VendedorDAO.obtenerVendedor(query,"rut", vendedor.getRut());
-        if(articulos.size() != 0){
+        List<Vendedor> vendedores = VendedorDAO.obtenerVendedor(query,"rut", vendedor.getRut());
+        if(vendedores.size() != 0){
             return false;
         }
         else{

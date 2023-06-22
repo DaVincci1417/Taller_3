@@ -14,7 +14,7 @@
 <body>
 <h1 class="encabezado"> Agregar Vendedor</h1>
 <h2 class="subtitulo">Ya existe un vendedor con ese RUT</h2>
-<form action="agregarLibro" method="post">
+<form action="agregarVendedor" method="post">
     <div class="centrado">
         <label> Nombre: </label>
         <input name="nombre" type="text" class="campoTexto">

@@ -13,7 +13,7 @@
 </head>
 <body>
 <h1 class="encabezado"> Agregar Inmueble</h1>
-<form action="agregarLibro" method="post">
+<form action="agregarInmueble" method="post">
     <div class="centrado">
         <label> Tipo de Contruccion: </label>
         <select name="tipo_construccion">

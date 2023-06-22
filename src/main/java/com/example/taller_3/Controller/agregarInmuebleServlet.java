@@ -36,12 +36,11 @@ public class agregarInmuebleServlet extends HttpServlet{
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException  {
         RequestDispatcher respuesta = req.getRequestDispatcher("/camposVaciosAgregarInmueble.jsp");
         if(req.getParameter("tipo_construccion").length() !=0 && req.getParameter("ubicacion_geografica").length() != 0 &&
-                req.getParameter("precio").length() != 0 && req.getParameter("titulo_profesional").length() != 0
-                && req.getParameter("estado_civil").length() != 0) {
+                req.getParameter("precio").length() != 0) {
 
             String tipoConstruccion= req.getParameter("tipo_construccion");
             String ubicacionGeografica = req.getParameter("ubicacion_geografica");
-            int precio = Integer.getInteger(req.getParameter("precio"));
+            int precio = Integer.parseInt(req.getParameter("precio"));
 
             Inmueble inmueble = new Inmueble(tipoConstruccion, ubicacionGeografica, precio);
 

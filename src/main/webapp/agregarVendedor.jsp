@@ -13,7 +13,7 @@
 </head>
 <body>
 <h1 class="encabezado"> Agregar Vendedor</h1>
-<form action="agregarLibro" method="post">
+<form action="agregarVendedor" method="post">
     <div class="centrado">
         <label> Nombre: </label>
         <input name="nombre" type="text" class="campoTexto">
