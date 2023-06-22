@@ -38,6 +38,7 @@
 
         <br><br>
         <input type="submit" value="Registrar" class="boton">
+        <a class="boton" href="index.jsp">Volver</a>
     </div>
 </form>
 </body>
