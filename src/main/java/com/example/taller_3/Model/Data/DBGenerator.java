@@ -57,11 +57,10 @@ public class DBGenerator {
     //Método estandar para crear una tabla
     private static void crearTablaInmueble(DSLContext create) {
         create.createTableIfNotExists("Inmueble")
-                .column("cod_inmueble", INTEGER)
                 .column("tipo_construccion", VARCHAR(100))
                 .column("ubicacion_geografica", VARCHAR(100))
                 .column("precio", INTEGER)
-                .constraint(primaryKey("cod_inmueble")).execute();
+                .constraint(primaryKey("ubicacion_geografica")).execute();
     }
 
     //Relaciona dos tablas a traves de una clave foranea

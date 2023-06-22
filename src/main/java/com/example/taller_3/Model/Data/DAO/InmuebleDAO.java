@@ -18,9 +18,9 @@ import static org.jooq.impl.DSL.table;
 public class InmuebleDAO {
     public static void agregarInmueble(DSLContext query, Inmueble inmueble){
         Table tablaVendedor = table(name("Inmueble"));
-        Field[] columnas = tablaVendedor.fields("cod_inmueble","tipo_construccion","ubicacion_geografica","precio");
-        query.insertInto(tablaVendedor, columnas[0], columnas[1], columnas[2], columnas[3])
-                .values(inmueble.getCodInmueble(), inmueble.getTipoConstruccion(), inmueble.getUbicacionGeografica(), inmueble.getPrecio())
+        Field[] columnas = tablaVendedor.fields("tipo_construccion","ubicacion_geografica","precio");
+        query.insertInto(tablaVendedor, columnas[0], columnas[1], columnas[2])
+                .values(inmueble.getTipoConstruccion(), inmueble.getUbicacionGeografica(), inmueble.getPrecio())
                 .execute();
     }
     public static List obtenerInmueble(DSLContext query, String columnaTabla, String dato){
@@ -34,12 +34,11 @@ public class InmuebleDAO {
     private static List obtenerListaInmuebles(Result resultados){
         List<Inmueble> inmuebles = new ArrayList<>();
         for(int fila=0; fila < resultados.size() ; fila++){
-            int codInmueble = (Integer) resultados.getValue(fila,"cod_inmueble");
             String tipoConstruccion = (String) resultados.getValue(fila,"tipo_construccion");
             String ubicacionGeografica = (String) resultados.getValue(fila,"ubicacion_geografica");
             int precio= (Integer) resultados.getValue(fila,"precio");
 
-            inmuebles.add(new Inmueble(codInmueble, tipoConstruccion, ubicacionGeografica, precio));
+            inmuebles.add(new Inmueble(tipoConstruccion, ubicacionGeografica, precio));
         }
         return inmuebles;
     }

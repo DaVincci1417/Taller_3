@@ -1,24 +1,16 @@
 package com.example.taller_3.Model;
 
 public class Inmueble {
-    private int codInmueble;
     private String tipoConstruccion;
     private String ubicacionGeografica;
     private int precio;
 
-    public Inmueble(int codInmueble, String tipoConstruccion, String ubicacionGeografica, int precio) {
-        setCodInmueble(codInmueble);
+    public Inmueble( String tipoConstruccion, String ubicacionGeografica, int precio) {
         setTipoConstruccion(tipoConstruccion);
         setUbicacionGeografica(ubicacionGeografica);
         setPrecio(precio);
     }
 
-    public int getCodInmueble() {
-        return codInmueble;
-    }
-    private void setCodInmueble(int codInmueble) {
-        this.codInmueble = codInmueble;
-    }
     public String getTipoConstruccion() {
         return tipoConstruccion;
     }

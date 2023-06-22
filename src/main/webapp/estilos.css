@@ -25,3 +25,23 @@
     width: 10%;
     height: 3%
 }
+.table{
+    width: 100%;
+    border: 1px solid #000;
+}
+.th{
+    width: 25%;
+    text-align: center;
+    vertical-align: top;
+    border: 1px solid #000;
+    border-collapse: collapse;
+    padding: 0.3em;
+}
+.td{
+    width: 25%;
+    text-align: left;
+    vertical-align: top;
+    border: 1px solid #000;
+    border-collapse: collapse;
+    padding: 0.3em;
+}
